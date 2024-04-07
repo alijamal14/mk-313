@@ -1,0 +1,8 @@
+{
+  "name": "mk313",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "c6cb46d9"
+}
