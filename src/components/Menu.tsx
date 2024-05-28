@@ -57,6 +57,12 @@ const appPages: AppPage[] = [
     url: '/folder/Spam',
     iosIcon: warningOutline,
     mdIcon: warningSharp
+  },
+  {
+    title: 'Login',
+    url: '/Login',
+    iosIcon: warningOutline,
+    mdIcon: warningSharp
   }
 ];
 
