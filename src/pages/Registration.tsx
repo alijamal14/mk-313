@@ -1,8 +1,8 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel, IonButton } from '@ionic/react';
 import { useParams } from 'react-router';
-import './Login.css';
+import './Page.css';
 
-const Login: React.FC = () => {
+const Register: React.FC = () => {
   const { name } = useParams<{ name: string; }>();
 
   return (
@@ -29,14 +29,18 @@ const Login: React.FC = () => {
             <IonInput type="text" required></IonInput>
           </IonItem>
           <IonItem>
+            <IonLabel position="floating">Email</IonLabel>
+            <IonInput type="email" required></IonInput>
+          </IonItem>
+          <IonItem>
             <IonLabel position="floating">Password</IonLabel>
             <IonInput type="password" required></IonInput>
           </IonItem>
-          <IonButton expand="block" type="submit">Login</IonButton>
+          <IonButton expand="block" type="submit">Register</IonButton>
         </div>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Login;
+export default Register;
