@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import './Registration.css';
 import Dexie from 'dexie';
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Register: React.FC = () => {
   const { name } = useParams<{ name: string; }>();
@@ -13,7 +14,7 @@ const Register: React.FC = () => {
 
   const db = new Dexie('MerchantDB');
   db.version(1).stores({
-    users: '++id,username,email,password'
+    users: 'id,username,email,password'
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -24,7 +25,8 @@ const Register: React.FC = () => {
     }
     setError('');
     
-    await db.table('users').add({ username, email, password });
+    const id = uuidv4();
+    await db.table('users').add({ id, username, email, password });
 
     console.log('User registered');
     // Optional: clear form or redirect user
