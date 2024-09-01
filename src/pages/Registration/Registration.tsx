@@ -1,6 +1,6 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel, IonButton } from '@ionic/react';
 import { useParams } from 'react-router';
-import './Page.css';
+import './Registration.css';
 import Dexie from 'dexie';
 import React, { useState } from 'react';
 
